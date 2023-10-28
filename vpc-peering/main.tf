@@ -21,7 +21,7 @@ module "vpc_b" {
 }
 
 # Uncomment the below for peering
-module "vpc_peering" {
+ module "vpc_peering" {
   source = "./vpc_peering"
   peer_vpc_id = module.vpc_b.vpc_id
   origin_vpc_id = module.vpc_a.vpc_id
@@ -40,7 +40,7 @@ module "peering_routes_vpc_b" {
   destination_cidr_block = var.vpc_cidr_a
   vpc_peering_connection_id = module.vpc_peering.vpc_peering_id
 
-}//Run the above Routes Block second time
+}//Run the above Routes Block second time 
 
 
 
